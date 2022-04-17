@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/enlesway/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/enlesway/backend-project-lvl1/actions/workflows/hexlet-check.yml)
+[![Actions Status](https://github.com/enlesway/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/enlesway/backend-project-lvl1/actions)
 
 ### Cl test:
 <a href="https://codeclimate.com/github/codeclimate/
