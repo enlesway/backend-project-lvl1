@@ -1,4 +1,4 @@
-name: nodejs
+name: Linter
 
 on:
   - push
@@ -20,5 +20,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: make install
+      - run: make instal
       - run: make lint
