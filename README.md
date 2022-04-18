@@ -6,4 +6,4 @@ codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99
 
 [![Linter Status](https://github.com/enlesway/backend-project-lvl1/workflows/Linter/badge.svg)](https://github.com/enlesway/backend-project-lvl1/actions/workflows/nodejs.yml)
 
-<script id="asciicast-488278" src="https://asciinema.org/a/488278.js" async></script>
+<a href="https://asciinema.org/a/488278" target="_blank"><img src="https://asciinema.org/a/488278.svg" /></a>
