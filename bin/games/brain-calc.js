@@ -13,6 +13,8 @@ const getSolution = (a, symb, b) => {
       return (a - b);
     case '*':
       return (a * b);
+    default:
+      return 'wrong symbol';
   }
 };
 
