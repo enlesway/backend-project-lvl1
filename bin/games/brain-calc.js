@@ -2,7 +2,7 @@
 
 import gameBody from '../../src/index.js';
 
-const gameQuestion = 'What is the result of the expression?';
+const guide = 'What is the result of the expression?';
 const getRandom = () => Math.floor(Math.random() * 30);
 const mathSymbols = ['+', '-', '*'];
 const getSolution = (a, symb, b) => {
@@ -28,4 +28,4 @@ const getTaskAndSol = () => {
   return taskAndSol;
 };
 
-gameBody(gameQuestion, getTaskAndSol);
+gameBody(guide, getTaskAndSol);

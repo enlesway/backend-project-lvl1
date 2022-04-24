@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
 
-const gameBody = (question, getTask) => {
+const gameBody = (gameGuide, getTask) => {
   console.log('Welcome to the Brain Games!');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
-  console.log(question);
+  console.log(gameGuide);
 
   let ansCounter = 0;
   let gameIn = true;
