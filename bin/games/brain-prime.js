@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 import gameBody from '../../src/index.js';
+import getRandom from '../../src/random.js';
 
 const guide = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const getRandom = () => Math.floor(Math.random() * 100) + 1;
+
 const isPrime = (num) => {
   if (num < 4) return 'yes';
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
@@ -12,13 +13,10 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const getTaskAndSol = () => {
-  const task = getRandom();
-  const solution = isPrime(task);
-  const taskAndSol = [];
-  taskAndSol.push(task);
-  taskAndSol.push(solution);
-  return taskAndSol;
+const generateRound = () => {
+  const task = getRandom(1, 100);
+  const answer = isPrime(task);
+  return [task, answer];
 };
 
-gameBody(guide, getTaskAndSol);
+gameBody(guide, generateRound);
