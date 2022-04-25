@@ -1,7 +1,5 @@
-#!/usr/bin/env node
-
-import gameBody from '../../src/index.js';
-import getRandom from '../../src/random.js';
+import gameBody from '../index.js';
+import getRandom from '../random.js';
 
 const guide = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -13,4 +11,4 @@ const generateRound = () => {
   return [task, answer];
 };
 
-gameBody(guide, generateRound);
+export default () => gameBody(guide, generateRound);
