@@ -10,11 +10,12 @@
  Brain games is a series of 5 small console games which will help fast stretch and train your brain. Games are based on simple mechanics: "question-answer". To win, you need to answer 3 questions correctly. In case of an incorrect answer, a game will be end, but you can always try again :)
 ### List of the games:
 
-- brain-calc: Calculat of a given arithmetic expression.
 - brain-even: Check if a number is even or not.
+- brain-calc: Calculate of a given arithmetic expression.
 - brain-gcd: Find the greatest common divisor.
-- brain-prime: Check if a number is prime or not.
 - brain-progression: Find the missing element of the progression.
+- brain-prime: Check if a number is prime or not.
+
 
 ## Installation
 
