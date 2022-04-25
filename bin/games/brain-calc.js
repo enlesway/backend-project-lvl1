@@ -1,31 +1,29 @@
 #!/usr/bin/env node
 
 import gameBody from '../../src/index.js';
+import getRandom from '../../src/random.js';
 
 const guide = 'What is the result of the expression?';
-const getRandom = () => Math.floor(Math.random() * 30);
 const mathSymbols = ['+', '-', '*'];
-const getSolution = (a, symb, b) => {
-  switch (symb) {
+
+const calculate = (firstNum, symbol, secondNum) => {
+  switch (symbol) {
     case '+':
-      return (a + b);
+      return (firstNum + secondNum);
     case '-':
-      return (a - b);
+      return (firstNum - secondNum);
     case '*':
-      return (a * b);
+      return (firstNum * secondNum);
     default:
-      return 'wrong symbol';
+      return 'Invalid symbol entered';
   }
 };
 
-const getTaskAndSol = () => {
-  const task = `${getRandom()} ${mathSymbols[Math.floor(Math.random() * mathSymbols.length)]} ${getRandom()}`;
+const generateRound = () => {
+  const task = `${getRandom(0, 30)} ${mathSymbols[Math.floor(Math.random() * mathSymbols.length)]} ${getRandom(0, 30)}`;
   const splitTask = task.split(' ');
-  const solution = getSolution(Number(splitTask[0]), splitTask[1], Number(splitTask[2]));
-  const taskAndSol = [];
-  taskAndSol.push(task);
-  taskAndSol.push(solution);
-  return taskAndSol;
+  const answer = calculate(Number(splitTask[0]), splitTask[1], Number(splitTask[2]));
+  return [task, answer];
 };
 
-gameBody(guide, getTaskAndSol);
+gameBody(guide, generateRound);
