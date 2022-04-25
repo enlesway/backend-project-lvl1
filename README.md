@@ -20,7 +20,7 @@
 ## Installation
 
 ```sh
-git clone https://github.com/MaksHaks/php-project-lvl1.git
+git clone https://github.com/enlesway/backend-project-lvl1.git
 make install
 ```
 ## Run games
@@ -32,11 +32,6 @@ make brain-gcd
 make brain-progression
 make brain-prime
 ```
-
-
-
-
-
 
 ### "Brain-even" game:
 <a href="https://asciinema.org/a/488284" target="_blank"><img src="https://asciinema.org/a/488284.svg" /></a>
