@@ -1,23 +1,21 @@
 #!/usr/bin/env node
 
 import gameBody from '../../src/index.js';
+import getRandom from '../../src/random.js';
 
 const guide = 'Find the greatest common divisor of given numbers.';
-const getRandom = () => Math.floor(Math.random() * 100);
-const getSolution = (a, b) => {
-  if (b === 0) return a;
-  return getSolution(b, a % b);
+
+const getGCD = (firstNum, secondNum) => {
+  if (secondNum === 0) return firstNum;
+  return getGCD(secondNum, firstNum % secondNum);
 };
 
-const getTaskAndSol = () => {
-  const a = getRandom();
-  const b = getRandom();
-  const task = `${a} ${b}`;
-  const solution = getSolution(a, b);
-  const taskAndSol = [];
-  taskAndSol.push(task);
-  taskAndSol.push(solution);
-  return taskAndSol;
+const generateRound = () => {
+  const firstTaskNum = getRandom(0, 100);
+  const secondTaskNum = getRandom(0, 100);
+  const task = `${firstTaskNum} ${secondTaskNum}`;
+  const answer = getGCD(firstTaskNum, secondTaskNum);
+  return [task, answer];
 };
 
-gameBody(guide, getTaskAndSol);
+gameBody(guide, generateRound);
