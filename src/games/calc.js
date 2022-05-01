@@ -18,9 +18,11 @@ const calculate = (firstNum, symbol, secondNum) => {
 };
 
 const generateRound = () => {
-  const task = `${getRandom(0, 30)} ${mathSymbols[Math.floor(Math.random() * mathSymbols.length)]} ${getRandom(0, 30)}`;
-  const splitTask = task.split(' ');
-  const answer = calculate(Number(splitTask[0]), splitTask[1], Number(splitTask[2]));
+  const firstOperator = getRandom(0, 30);
+  const secondOperator = getRandom(0, 30);
+  const operand = mathSymbols[getRandom(0, 3)];
+  const task = `${firstOperator} ${operand} ${secondOperator}`;
+  const answer = calculate(firstOperator, operand, secondOperator);
   return [task, answer];
 };
 
