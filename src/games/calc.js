@@ -4,25 +4,26 @@ import getRandom from '../random.js';
 const guide = 'What is the result of the expression?';
 const mathSymbols = ['+', '-', '*'];
 
-const calculate = (firstNum, symbol, secondNum) => {
-  switch (symbol) {
+const calculate = (firstOperand, secondOperand, operation) => {
+  switch (operation) {
     case '+':
-      return (firstNum + secondNum);
+      return (firstOperand + secondOperand);
     case '-':
-      return (firstNum - secondNum);
+      return (firstOperand - secondOperand);
     case '*':
-      return (firstNum * secondNum);
+      return (firstOperand * secondOperand);
     default:
-      return 'Invalid symbol entered';
+      throw new Error(`operation '${operation}' is not supported`);
   }
 };
 
 const generateRound = () => {
-  const firstOperator = getRandom(0, 30);
-  const secondOperator = getRandom(0, 30);
-  const operand = mathSymbols[getRandom(0, 3)];
-  const task = `${firstOperator} ${operand} ${secondOperator}`;
-  const answer = calculate(firstOperator, operand, secondOperator);
+  const firstNum = getRandom(0, 30);
+  const secondNum = getRandom(0, 30);
+  const symbol = mathSymbols[getRandom(0, 2)];
+  const task = `${firstNum} ${symbol} ${secondNum}`;
+  const answer = String(calculate(firstNum, secondNum, symbol));
+  calculate(firstNum, secondNum, '/');
   return [task, answer];
 };
 
