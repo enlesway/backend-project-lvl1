@@ -23,7 +23,6 @@ const generateRound = () => {
   const symbol = mathSymbols[getRandom(0, 2)];
   const task = `${firstNum} ${symbol} ${secondNum}`;
   const answer = String(calculate(firstNum, secondNum, symbol));
-  calculate(firstNum, secondNum, '/');
   return [task, answer];
 };
 
