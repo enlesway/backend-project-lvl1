@@ -21,6 +21,8 @@
 
 ```sh
 git clone https://github.com/enlesway/backend-project-lvl1.git
+```
+```sh
 make install
 ```
 ## Run games
