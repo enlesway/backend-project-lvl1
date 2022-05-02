@@ -1,23 +1,24 @@
 import gameBody from '../index.js';
 import getRandom from '../random.js';
 
+const progressionLength = 10;
+
 const guide = 'What number is missing in the progression?';
 
-const getProgression = (progressionLength, progressionStep, progressionFirstNum) => {
+const getProgression = (progressionFirstElement, progressionStep) => {
   const progressionArray = [];
   for (let i = 0; i < progressionLength; i += 1) {
-    progressionArray.push(progressionFirstNum + (progressionStep * i));
+    progressionArray.push(progressionFirstElement + (progressionStep * i));
   }
   return progressionArray;
 };
 
 const generateRound = () => {
-  const progresLength = 10;
-  const progresStep = getRandom(5, 1);
-  const progresFirstNum = getRandom(20, 0);
-  const taskProgression = getProgression(progresLength, progresStep, progresFirstNum);
-  const indexTaskNum = getRandom(10, 0);
-  const answer = taskProgression[indexTaskNum];
+  const progresStep = getRandom(1, 5);
+  const progresFirstNum = getRandom(0, 20);
+  const taskProgression = getProgression(progresFirstNum, progresStep);
+  const indexTaskNum = getRandom(0, 10);
+  const answer = String(taskProgression[indexTaskNum]);
   taskProgression[indexTaskNum] = '..';
   const task = taskProgression.join(' ');
   return [task, answer];
