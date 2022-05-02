@@ -12,7 +12,7 @@ const generateRound = () => {
   const firstTaskNum = getRandom(0, 100);
   const secondTaskNum = getRandom(0, 100);
   const task = `${firstTaskNum} ${secondTaskNum}`;
-  const answer = getGCD(firstTaskNum, secondTaskNum);
+  const answer = String(getGCD(firstTaskNum, secondTaskNum));
   return [task, answer];
 };
 
